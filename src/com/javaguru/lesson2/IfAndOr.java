@@ -8,7 +8,7 @@ public class IfAndOr {
         printGreetings();
         int userInput = getNumberFromUser();
 
-        if ( userInput == 0 || userInput > 0) {
+        if (userInput == 0 || userInput > 0) {
             System.out.println("Equals Zero Or Positive!");
         }
 

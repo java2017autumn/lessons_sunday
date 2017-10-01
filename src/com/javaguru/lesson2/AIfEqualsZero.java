@@ -26,7 +26,7 @@ public class AIfEqualsZero {
         return userInput;
     }
 
-    public static boolean isNumberEqualsZero(int number){
+    public static boolean isNumberEqualsZero(int number) {
 //        if ( number == ZERO) {
 //            return true;
 //        } else {
