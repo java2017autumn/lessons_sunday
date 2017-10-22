@@ -33,4 +33,8 @@ public class Lock {
     public boolean isCorrectCode(String code) {
         return this.code.equals(code);
     }
+
+    public void open() {
+        isOpen = true;
+    }
 }

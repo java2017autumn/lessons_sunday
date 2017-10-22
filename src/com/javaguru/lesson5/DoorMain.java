@@ -12,5 +12,15 @@ public class DoorMain {
 
         System.out.println("isOpen: " + door.isOpen());
 
+        String firstInput = "124125aw";
+        String secondInput = "0000";
+
+        System.out.println("First input result: " + door.getLock().isCorrectCode(firstInput));
+        System.out.println("Second input result: " + door.getLock().isCorrectCode(secondInput));
+        if (door.getLock().isCorrectCode(secondInput)) {
+            door.getLock().open();
+        }
+
+        System.out.println("Open: " + door.isOpen());
     }
 }
