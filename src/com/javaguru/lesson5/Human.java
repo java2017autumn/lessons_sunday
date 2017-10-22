@@ -25,4 +25,9 @@ public class Human {
         System.out.println("Hello! My name is "
                 + getName() + ". I am " + getAge() + " years old.");
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\n" + "Age: " + getAge();
+    }
 }

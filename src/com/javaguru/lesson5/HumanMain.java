@@ -7,5 +7,9 @@ public class HumanMain {
         human.setName("John");
         human.setAge(15);
         human.sayHello();
+
+        System.out.println(human.toString());
+
+
     }
 }
