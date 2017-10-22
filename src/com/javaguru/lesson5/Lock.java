@@ -6,6 +6,14 @@ public class Lock {
     String code = "0000";
     boolean isBlocked;
 
+    public Lock() {
+
+    }
+
+    public Lock(String code) {
+        this.code = code;
+    }
+
     public boolean isOpen() {
         return isOpen;
     }

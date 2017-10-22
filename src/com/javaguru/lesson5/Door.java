@@ -7,6 +7,13 @@ public class Door {
     String color;
     Lock lock;
 
+    public Door(boolean isOpen, String material, String color, Lock lock) {
+        this.isOpen = isOpen;
+        this.material = material;
+        this.color = color;
+        this.lock = lock;
+    }
+
     public boolean isOpen() {
         return lock.isOpen();
     }
