@@ -2,24 +2,16 @@ package com.javaguru.lesson5;
 
 public class Lock {
 
-    boolean isOpen;
+    boolean unlocked;
     String code = "0000";
-    boolean isBlocked;
+    boolean blocked;
 
-    public Lock() {
-
+    public boolean isUnlocked() {
+        return unlocked;
     }
 
-    public Lock(String code) {
-        this.code = code;
-    }
-
-    public boolean isOpen() {
-        return isOpen;
-    }
-
-    public void setOpen(boolean open) {
-        isOpen = open;
+    public void setUnlocked(boolean unlocked) {
+        this.unlocked = unlocked;
     }
 
     public String getCode() {
@@ -31,18 +23,24 @@ public class Lock {
     }
 
     public boolean isBlocked() {
-        return isBlocked;
+        return blocked;
     }
 
     public void setBlocked(boolean blocked) {
-        isBlocked = blocked;
+        this.blocked = blocked;
     }
 
     public boolean isCorrectCode(String code) {
         return this.code.equals(code);
     }
 
-    public void open() {
-        isOpen = true;
+    public void unlock(String code) {
+        if (isCorrectCode(code)) {
+            setUnlocked(true);
+            System.out.println("Successfully unlocked!");
+        } else {
+            System.out.println("Failed to unlock!");
+        }
     }
+
 }

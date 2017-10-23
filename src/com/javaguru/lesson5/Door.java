@@ -2,24 +2,18 @@ package com.javaguru.lesson5;
 
 public class Door {
 
-    boolean isOpen;
     String material;
     String color;
     Lock lock;
 
-    public Door(boolean isOpen, String material, String color, Lock lock) {
-        this.isOpen = isOpen;
+    public Door(String material, String color, Lock lock) {
         this.material = material;
         this.color = color;
         this.lock = lock;
     }
 
-    public boolean isOpen() {
-        return lock.isOpen();
-    }
-
-    public void setOpen(boolean open) {
-        isOpen = open;
+    public boolean isOpened() {
+        return getLock().isUnlocked();
     }
 
     public String getMaterial() {
@@ -44,5 +38,9 @@ public class Door {
 
     public void setLock(Lock lock) {
         this.lock = lock;
+    }
+
+    public void open(String code) {
+        getLock().unlock(code);
     }
 }

@@ -1,22 +1,25 @@
 package com.javaguru.lesson5;
 
+import java.util.Scanner;
+
 public class DoorMain {
 
     public static void main(String[] args) {
-        Lock lock = new Lock();
-        Door door = new Door(false, "Wood", "Black", lock);
+        Lock combinationLock = new Lock();
+        Door door = new Door("Wood", "Black", combinationLock);
 
-        System.out.println("isOpen: " + door.isOpen());
+        System.out.println("Door opened: " + door.isOpened());
 
-        String firstInput = "124125aw";
-        String secondInput = "0000";
+        System.out.println("Please enter code: ");
+        String userCode = getCodeFromUser();
 
-        System.out.println("First input result: " + door.getLock().isCorrectCode(firstInput));
-        System.out.println("Second input result: " + door.getLock().isCorrectCode(secondInput));
-        if (door.getLock().isCorrectCode(secondInput)) {
-            door.getLock().open();
-        }
+        door.open(userCode);
 
-        System.out.println("Open: " + door.isOpen());
+        System.out.println("Door opened: " + door.isOpened());
+    }
+
+    public static String getCodeFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 }
