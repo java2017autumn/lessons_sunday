@@ -24,7 +24,7 @@ public class ArrayListExample {
     }
 
 
-    public static String getStringFromUser(){
+    public static String getStringFromUser() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
