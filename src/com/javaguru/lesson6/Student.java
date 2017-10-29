@@ -40,6 +40,25 @@ public class Student {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+
+        Student student = (Student) o;
+
+        if (getName() != null ? !getName().equals(student.getName()) : student.getName() != null) return false;
+        return getSurname() != null ? getSurname().equals(student.getSurname()) : student.getSurname() == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() != null ? getName().hashCode() : 0;
+        result = 31 * result + (getSurname() != null ? getSurname().hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
