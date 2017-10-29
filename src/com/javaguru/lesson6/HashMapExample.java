@@ -29,6 +29,10 @@ public class HashMapExample {
             txt = txt + " " + wordsWithCounter.get(string);
             System.out.println(txt);
         }
+
+        for (Map.Entry entry : wordsWithCounter.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
+        }
     }
 
     public static String getStringFromUser() {
