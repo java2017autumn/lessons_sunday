@@ -45,9 +45,20 @@ public class ShoppingCartMain {
 
         cart.printProducts();
 
+        System.out.println("Filtered by type");
         cart.getProducts().entrySet().stream()
                 .filter(entry -> entry.getKey().getType() == ProductType.FRUIT)
                 .sorted(Map.Entry.comparingByValue())
-                .forEach(System.out::println);
+                .forEach(entry -> System.out.println(entry));
+
+        cart.getProducts().entrySet()
+                .forEach(entry -> {
+                    BigDecimal price = entry.getKey().getPrice();
+                    Integer count = entry.getValue();
+
+                    BigDecimal totalPrice = price.multiply(new BigDecimal(count));
+                    System.out.println("Product: " + entry.getKey().getName());
+                    System.out.println("Price: " + totalPrice);
+                });
     }
 }
