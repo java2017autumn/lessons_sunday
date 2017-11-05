@@ -26,7 +26,9 @@ public class BirdTreeMapMain {
 
         birdMap.entrySet()
                 .stream()
+                .filter(entry -> entry.getValue().equals("Flying"))
                 .sorted(Map.Entry.comparingByKey(new BirdComparator()))
+                .map(entry -> entry.getKey().getName())
                 .forEach(System.out::println);
     }
 }
