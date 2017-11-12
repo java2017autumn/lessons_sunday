@@ -1,4 +1,4 @@
-package com.javaguru.lesson8;
+package com.javaguru.lesson8.light;
 
 public class LightMain {
 
