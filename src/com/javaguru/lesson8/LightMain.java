@@ -8,20 +8,17 @@ public class LightMain {
 
         switcher.connect(lightBulb);
 
-        switcher.turnOn();
-        switcher.turnOn();
-        switcher.turnOn();
-        switcher.turnOn();
-        switcher.turnOff();
-
-        switcher.turnOn();
-        switcher.turnOff();
-
-        switcher.turnOn();
-        switcher.turnOff();
-
-        switcher.turnOn();
-        switcher.turnOn();
-        switcher.turnOn();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
+        switcher.changeState();
     }
 }

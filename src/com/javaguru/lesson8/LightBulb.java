@@ -21,7 +21,10 @@ public class LightBulb {
         }
     }
 
-    public void turnOff(){
-        turnedOn = false;
+    public void turnOff() {
+        if (turnedOn) {
+            turnedOn = false;
+            System.out.println("Light: off");
+        }
     }
 }
