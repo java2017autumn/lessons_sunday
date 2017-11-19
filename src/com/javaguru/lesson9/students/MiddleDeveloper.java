@@ -1,4 +1,4 @@
-package com.javaguru.lesson9;
+package com.javaguru.lesson9.students;
 
 public class MiddleDeveloper extends JuniorDeveloper{
 
@@ -8,6 +8,6 @@ public class MiddleDeveloper extends JuniorDeveloper{
 
     @Override
     public void study() {
-        System.out.println("I'm studying...");
+        System.out.println("Advanced studying");
     }
 }

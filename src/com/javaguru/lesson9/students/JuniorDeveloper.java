@@ -1,4 +1,4 @@
-package com.javaguru.lesson9;
+package com.javaguru.lesson9.students;
 
 public class JuniorDeveloper extends Student {
 
