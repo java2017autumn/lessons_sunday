@@ -8,9 +8,10 @@ public class UserServiceTest {
 
     public static void main(String[] args) {
         shouldAddUser();
+        shouldNotGetUserById();
     }
 
-    public static void shouldAddUser() {
+    private static void shouldAddUser() {
         Database database = new DefaultDatabase();
         UserService userService = new UserService(database);
         User user = new User();
@@ -20,6 +21,18 @@ public class UserServiceTest {
         userService.addUser(user);
 
         printResult("shouldAddUser", user.getId() != null);
+    }
+
+    private static void shouldNotGetUserById() {
+        Database database = new DefaultDatabase();
+        UserService userService = new UserService(database);
+        User user = new User();
+        user.setAge(20);
+        user.setName("Ed");
+        userService.addUser(user);
+
+        User selectedUser = userService.getUser(-1L);
+        printResult("shouldNotGetUserById", selectedUser == null);
     }
 
     private static void printResult(String testName, boolean isSuccess) {
