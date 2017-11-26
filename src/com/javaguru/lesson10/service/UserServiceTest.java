@@ -2,6 +2,7 @@ package com.javaguru.lesson10.service;
 
 import com.javaguru.lesson10.database.Database;
 import com.javaguru.lesson10.database.DefaultDatabase;
+import com.javaguru.lesson10.database.ListDatabaseImpl;
 import com.javaguru.lesson10.domain.User;
 
 public class UserServiceTest {
@@ -12,7 +13,7 @@ public class UserServiceTest {
     }
 
     private static void shouldAddUser() {
-        Database database = new DefaultDatabase();
+        Database database = new ListDatabaseImpl();
         UserService userService = new UserService(database);
         User user = new User();
         user.setAge(20);
